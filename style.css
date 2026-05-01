@@ -77,7 +77,7 @@ p {
 /* Defini o estilo visual das minhas etiquetas de habilidades */
 .tag {
     /* Escolhi esse verde neon para dar um contraste forte no fundo escuro */
-    background: #006e3b;
+    background: #00ff88;
     color: #121212;
     
     /* Dei um espaçamento interno para o texto não ficar colado na borda */
@@ -115,5 +115,5 @@ p {
 /* Fiz um efeito de "zoom" e um brilho verde quando eu passar o mouse por cima */
 .tech-banner img:hover {
     transform: scale(1.2);
-    filter: drop-shadow(0 0 10px #00ff88); /* Brilho neon que combina com meus títulos */
+    filter: drop-shadow(0 0 10px #a8c4b6); /* Brilho neon que combina com meus títulos */
 }
