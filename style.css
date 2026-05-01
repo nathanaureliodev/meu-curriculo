@@ -71,6 +71,6 @@ p {
     align-items: center;
 }
 .card ul {
-    list-style-type: disc; /* Coloquei bolinhas para os itens da lista */
+   
     padding-left: 20px; /* Deixei um espaço para as bolinhas não ficarem grudadas no texto */
 }
