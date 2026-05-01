@@ -74,3 +74,26 @@ p {
    
     padding-left: 20px; /* Deixei um espaço para as bolinhas não ficarem grudadas no texto */
 }
+/* Defini o estilo visual das minhas etiquetas de habilidades */
+.tag {
+    /* Escolhi esse verde neon para dar um contraste forte no fundo escuro */
+    background: #006e3b;
+    color: #121212;
+    
+    /* Dei um espaçamento interno para o texto não ficar colado na borda */
+    padding: 5px 10px;
+    
+    /* Arredondei bastante as bordas para elas ficarem com formato de pílula */
+    border-radius: 20px;
+    
+    /* Ajustei o tamanho da fonte para não ocupar muito espaço dentro do card */
+    font-size: 0.8rem;
+    font-weight: bold;
+    
+    /* Garanti que elas não fiquem grudadas umas nas outras */
+    margin-right: 5px;
+    margin-bottom: 5px;
+    
+    /* Deixei como inline-block para elas fluírem naturalmente uma ao lado da outra */
+    display: inline-block;
+}
