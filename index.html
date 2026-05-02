@@ -78,7 +78,25 @@
             </div>
         </section>
 
-    </main> <footer style="margin-top: 40px; text-align: center; color: #bebcbc;">
+    </main>
+    
+    <script> 
+    // 1. document agora com 'd' minúsculo
+    const meuTitulo = document.querySelector('h1');
+    
+    // 2. getHours() agora com parênteses para funcionar
+    const data = new Date().getHours(); 
+
+    if (data >= 5 && data < 12) {
+        meuTitulo.textContent = 'Bom dia, seja bem-vindo ao meu currículo!';
+    } else if (data >= 12 && data < 18) {
+        meuTitulo.textContent = 'Boa tarde, seja bem-vindo ao meu currículo!';
+    } else {
+        meuTitulo.textContent = 'Boa noite, seja bem-vindo ao meu currículo!';
+    }
+</script>
+
+ <footer style="margin-top: 40px; text-align: center; color: #bebcbc;">
         <p>© 2026 Nathan Aurélio - Desenvolvedor em Construção 🚀</p>
         <p>
             <a href="https://github.com/nathanaureliodev" target="_blank" style="color: #00ff88;">GitHub</a> | 
