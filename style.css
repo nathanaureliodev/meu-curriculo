@@ -97,23 +97,40 @@ p {
     /* Deixei como inline-block para elas fluírem naturalmente uma ao lado da outra */
     display: inline-block;
 }
-/* Organizei os ícones para ficarem centralizados e bem espalhados */
 .tech-banner {
     display: flex;
     justify-content: center;
-    gap: 30px; /* Dei um espaço legal entre um ícone e outro */
-    margin-bottom: 40px; /* Afastei os ícones da grade de baixo para não embolar */
+    gap: 50px;
+    margin-bottom: 50px;
 }
-
-/* Configurei o tamanho das imagens para um tamanho médio profissional */
-.tech-banner img {
-    width: 60px; 
-    height: 60px;
-    transition: transform 0.3s; /* Preparei o efeito de animação */
+.icon-animado {
+    width: 65px;
+    height: 65px;
+    transition: transform 0.3s ease;
+    /*nome da aniimação*/
+    animation: flutuar 2s infinite ease-in-out;
+    filter : drop-shadow (0 0 10px rgba(0, 255, 136, 0.3));
+    transition: all 0.3s ease;
 }
-
-/* Fiz um efeito de "zoom" e um brilho verde quando eu passar o mouse por cima */
-.tech-banner img:hover {
-    transform: scale(1.2);
-    filter: drop-shadow(0 0 10px #a8c4b6); /* Brilho neon que combina com meus títulos */
+ @keyframes flutuar {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }  
+ }
+.icon-animado:nth-child(1) {
+    animation-delay: 0.5s;
 }
+.icon-animado:nth-child(2) {
+    animation-delay: 1s;
+}
+.icon-animado:nth-child(3) {
+    animation-delay: 0s;
+}
+.icon-animado:hover {
+    transform: scale(1.3);
+    filter: drop-shadow( 0 0 20px #53a87e);
+    cursor: pointer;
+  }
