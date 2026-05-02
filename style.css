@@ -139,4 +139,6 @@ h2 {
 /* Ajuste para o hover antigo continuar funcionando depois que o meu card aparecer */
 .card.mostrar:hover {
     transform: scale(1.02);
+    background-color: #252525; /* Ele fica levemente mais claro */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Ganha tipo uma sombra para parece que flutua */
 }
