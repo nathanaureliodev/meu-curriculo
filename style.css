@@ -104,3 +104,25 @@ h2 {
     transform: scale(1.3);
     cursor: pointer;
 }
+/* Estilizei o meu botão de ver projeto */
+.btn-projeto {
+    display: inline-block;
+    margin-left: 10px;
+    padding: 4px 12px;
+    background-color: #121212; /* Fundo escuro para contrastar com a tag */
+    color: #00ff88 !important; /* Cor neon no texto */
+    text-decoration: none;
+    border: 1px solid #00ff88;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+/* Efeito de preenchimento quando eu passo o rato */
+.btn-projeto:hover {
+    background-color: #00ff88;
+    color: #121212 !important;
+    box-shadow: 0 0 10px #00ff88;
+    transform: translateY(-2px);
+}
