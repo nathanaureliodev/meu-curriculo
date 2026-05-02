@@ -40,10 +40,6 @@ main {
     transition: transform 0.3s; 
 }
 
-.card:hover {
-    transform: scale(1.02);
-    background-color: #252525;
-}
 
 h2 {
     margin-bottom: 10px;
@@ -125,4 +121,22 @@ h2 {
     color: #121212 !important;
     box-shadow: 0 0 10px #00ff88;
     transform: translateY(-2px);
+}
+
+/* Estado inicial do meu card: invisível e um pouco puxado para baixo */
+.escondido {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Estado final do meu card: visível e no lugar original */
+.mostrar {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Ajuste para o hover antigo continuar funcionando depois que o meu card aparecer */
+.card.mostrar:hover {
+    transform: scale(1.02);
 }

@@ -18,7 +18,7 @@
 
     <main>
         
-        <section class="card"> 
+        <section class="card escondido"> 
             <h2>Formação Acadêmica</h2>
             <div class="tags">
                <span class="tag">Graduando em Análise e Desenvolvimento de Sistemas - Uniasselvi (2025-2027)</span>
@@ -26,7 +26,7 @@
             </div>
         </section>
 
-        <section class="card"> 
+        <section class="card escondido"> 
             <h2>Habilidades Técnicas</h2>
             <div class="tags">
                 <span class="tag">HTML5</span>
@@ -36,7 +36,7 @@
             </div>
         </section>
 
-        <section class="card"> 
+        <section class="card escondido"> 
             <h2>Experiência Profissional</h2>
     <div class="tags">
 
@@ -50,7 +50,7 @@
     </div>
 </section>
 
-        <section class="card"> 
+        <section class="card escondido"> 
             <h2>Certificações</h2>
             <div class="tags">
                 <span class="tag">Fundamentos HTML/CSS/JS - ROCKSEAT (2025)</span>
@@ -58,7 +58,7 @@
             </div>
         </section>
         
-        <section class="card"> 
+        <section class="card escondido"> 
             <h2>Habilidades Interpessoais</h2>
             <div class="tags">
                 <span class="tag">Trabalho em equipe</span>
@@ -69,7 +69,7 @@
             </div>
         </section>
 
-        <section class="card"> 
+        <section class="card escondido"> 
             <h2>Ferramentas</h2>
             <div class="tags">
                 <span class="tag">VS Code</span>
@@ -78,8 +78,25 @@
             </div>
         </section>
 
-    </main>
+    <section class="card escondido"> 
+    <h2>Formação Acadêmica</h2>
+    </section>
+
+    <section class="card escondido"> 
+    <h2>Habilidades Técnicas</h2>
+     </section>
+
+        </main>
     
+    <footer style="margin-top: 40px; text-align: center; color: #bebcbc;">
+        <p>© 2026 Nathan Aurélio - Desenvolvedor Front-end em Construção 🚀</p>
+        <p>
+            <a href="https://github.com/nathanaureliodev" target="_blank" style="color: #00ff88;">GitHub</a> | 
+            <a href="https://www.linkedin.com/in/nathan-aur%C3%A9lio-33a7a8372/" target="_blank" style="color: #00ff88;">LinkedIn</a>
+        </p>
+    </footer>
+
+
     <script> 
     // 1. document agora com 'd' minúsculo
     const meuTitulo = document.querySelector('h1');
@@ -94,15 +111,28 @@
     } else {
         meuTitulo.textContent = 'Boa noite, seja bem-vindo ao meu currículo!';
     }
+// --- MEU EFEITO DE FADE IN (APARECIMENTO SUAVE) ---
+
+    // Configurei um "observador" para avisar quando meus cards aparecerem na tela durante o scroll
+    const observador = new IntersectionObserver((entradas) => {
+        entradas.forEach((entrada) => {
+            // Se o card entrar na área visível do navegador...
+            if (entrada.isIntersecting) {
+                // Eu adiciono a classe 'mostrar' que criei no CSS para disparar a animação
+                entrada.target.classList.add('mostrar');
+            }
+        });
+    });
+
+    // Capturei todos os elementos que eu marquei com a classe 'escondido' no HTML
+    const elementosEscondidos = document.querySelectorAll('.escondido');
+
+    // Falei para o meu observador ficar vigiando cada um desses cards
+    elementosEscondidos.forEach((elemento) => {
+        observador.observe(elemento);
+    });
 </script>
 
- <footer style="margin-top: 40px; text-align: center; color: #bebcbc;">
-        <p>© 2026 Nathan Aurélio - Desenvolvedor em Construção 🚀</p>
-        <p>
-            <a href="https://github.com/nathanaureliodev" target="_blank" style="color: #00ff88;">GitHub</a> | 
-            <a href="https://www.linkedin.com/in/nathan-aur%C3%A9lio-33a7a8372/" target="_blank" style="color: #00ff88;">LinkedIn</a>
-        </p>
-    </footer>
 
 </body>
 </html>
