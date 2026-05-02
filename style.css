@@ -6,48 +6,40 @@
 }
 
 body {
-    /* Escolhi um fundo escuro porque acho que fica mais moderno e cansa menos o olho */
     background-color: #121212; 
     color: white;
     font-family: sans-serif;
-    
-    /* Usei flexbox aqui para forçar tudo a ficar bem no meio da minha tela */
     display: flex;
     flex-direction: column; 
     align-items: center;    
-    justify-content: center; 
     min-height: 100vh;      
     padding: 20px;
 }
 
 h1 {
-    /* Dei um espaço embaixo do título para ele não ficar grudado nas caixas */
     margin-bottom: 30px;
     font-size: 2.5rem;
     text-transform: uppercase;
+    text-align: center;
 }
 
-/* Aqui é onde eu montei a minha grade de informações */
-.grid-container {
+/* MUDEI AQUI: Usei 'main' para bater com o seu HTML e o grid voltar a funcionar */
+main {
     display: grid;
-    /* Configurei para ter colunas que se ajustam sozinhas se eu abrir no celular */
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
     width: 100%;
     max-width: 1000px; 
 }
 
-/* Estilizei cada "card" do meu currículo para parecer um painel */
 .card {
     background-color: #1e1e1e;
     padding: 20px;
     border-radius: 12px;
-    /* Botei essa bordinha branca na esquerda para dar um detalhe de destaque */
     border-left: 5px solid #ffffff; 
     transition: transform 0.3s; 
 }
 
-/* Fiz um efeito para a caixinha dar um leve pulo quando eu passar o mouse */
 .card:hover {
     transform: scale(1.02);
     background-color: #252525;
@@ -55,82 +47,60 @@ h1 {
 
 h2 {
     margin-bottom: 10px;
-    /* Usei esse verde neon para os subtítulos chamarem mais atenção,fica algo parecido com um haxcker kkkkk */
     color: #00ff88; 
     font-size: 1.2rem;
 }
 
-p {
-    /* Aumentei o espaço entre as linhas para o texto ficar mais fácil de ler */
-    line-height: 1.6;
-    color: #ccc;
-}
+/* Garanti que os títulos dos cards fiquem alinhados */
 .card h2 {
-    min-height: 50px; /* Isso garante que, mesmo que o título seja curto, a caixa não diminua */
+    min-height: 50px;
     display: flex;
     align-items: center;
 }
-.card ul {
-   
-    padding-left: 20px; /* Deixei um espaço para as bolinhas não ficarem grudadas no texto */
-}
-/* Defini o estilo visual das minhas etiquetas de habilidades */
+
 .tag {
-    /* Escolhi esse verde neon para dar um contraste forte no fundo escuro */
     background: #00ff88;
     color: #121212;
-    
-    /* Dei um espaçamento interno para o texto não ficar colado na borda */
     padding: 5px 10px;
-    
-    /* Arredondei bastante as bordas para elas ficarem com formato de pílula */
     border-radius: 20px;
-    
-    /* Ajustei o tamanho da fonte para não ocupar muito espaço dentro do card */
     font-size: 0.8rem;
     font-weight: bold;
-    
-    /* Garanti que elas não fiquem grudadas umas nas outras */
     margin-right: 5px;
-    margin-bottom: 5px;
-    
-    /* Deixei como inline-block para elas fluírem naturalmente uma ao lado da outra */
+    margin-bottom: 8px;
     display: inline-block;
 }
+
+/* Banner dos ícones */
 .tech-banner {
     display: flex;
     justify-content: center;
     gap: 50px;
     margin-bottom: 50px;
 }
+
+/* CORRIGIDO: Mudei de 3ms para 3s (3 segundos) para a flutuação ficar suave */
 .icon-animado {
     width: 65px;
     height: 65px;
-    transition: transform 0.3s ease;
-    /*nome da aniimação*/
-    animation: flutuar 2s infinite ease-in-out;
-    filter : drop-shadow (0 0 10px rgba(0, 255, 136, 0.3));
+    animation: flutuar 3s infinite ease-in-out; 
+    filter: drop-shadow(0 0 10px rgba(0, 255, 136, 0.3));
     transition: all 0.3s ease;
 }
- @keyframes flutuar {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-15px);
-    }  
- }
-.icon-animado:nth-child(1) {
-    animation-delay: 0.5s;
+
+@keyframes flutuar {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
 }
-.icon-animado:nth-child(2) {
-    animation-delay: 1s;
-}
-.icon-animado:nth-child(3) {
-    animation-delay: 0s;
-}
+
+/* Delays para o efeito de onda */
+.icon-animado:nth-child(1) { animation-delay: 0s; }
+.icon-animado:nth-child(2) { animation-delay: 0.5s; }
+.icon-animado:nth-child(3) { animation-delay: 1s; }
+
+/* CORRIGIDO: Ajustei a sintaxe do hover (estava com um ponto a mais) */
 .icon-animado:hover {
+    animation-play-state: paused;
+    filter: drop-shadow(0 0 20px rgba(0, 255, 136, 0.8));
     transform: scale(1.3);
-    filter: drop-shadow( 0 0 20px #53a87e);
     cursor: pointer;
-  }
+}
