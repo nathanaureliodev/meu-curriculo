@@ -14,7 +14,9 @@ body {
     align-items: center;    
     min-height: 100vh;      
     padding: 20px;
+    min-width: 360px; /* Isso garante que o site nunca fique mais "fino" que um celular padrão */
 }
+
 
 h1 {
     margin-bottom: 30px;
@@ -26,10 +28,10 @@ h1 {
 /* MUDEI AQUI: Usei 'main' para bater com o seu HTML e o grid voltar a funcionar */
 main {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 20px;
     width: 100%;
-    max-width: 1000px; 
+    max-width: 1200px; 
 }
 
 .card {
@@ -64,14 +66,19 @@ h2 {
     margin-right: 5px;
     margin-bottom: 8px;
     display: inline-block;
+    white-space: nowrap;
+    width: fit-content;
+    max-width: 100%;
 }
 
 /* Banner dos ícones */
 .tech-banner {
     display: flex;
     justify-content: center;
-    gap: 50px;
+    gap: 50px;/* MUDEI AQUI: Aumentei a margem para dar mais espaço entre os ícones e o conteúdo do card */
+    flex-wrap: wrap; /* Permite que os ícones quebrem para a próxima linha se o espaço for pequeno */
     margin-bottom: 50px;
+
 }
 
 /* CORRIGIDO: Mudei de 3ms para 3s (3 segundos) para a flutuação ficar suave */
