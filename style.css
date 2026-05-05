@@ -16,27 +16,43 @@ body {
     padding: 20px;
     min-width: 360px; /* Isso garante que o site nunca fique mais "fino" que um celular padrão */
 }
+/* TABLET: Quando a tela for menor que 992px, muda para 2 colunas */
+@media (max-width: 992px) {
+    main {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
 
+
+    /* CELULAR: Quando a tela for menor que 600px, muda para 1 coluna */
+@media (max-width: 600px) {
+    main {
+        grid-template-columns:1fr;
+    }
+}
 
 h1 {
     margin-bottom: 30px;
-    font-size: 2.5rem;
+    font-size: 1.8rem;
     text-transform: uppercase;
     text-align: center;
+    ;
 }
 
 /* MUDEI AQUI: Usei 'main' para bater com o seu HTML e o grid voltar a funcionar */
 main {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(3,1fr);
+    gap: 25px;
     width: 100%;
     max-width: 1200px; 
+    margin: 0 auto; /* Centra o grid horizontalmente */
+    align-items: stretch; /* Garante que os cards tenham a mesma altura, mesmo com conteúdos diferentes */
 }
 
 .card {
     background-color: #1e1e1e;
-    padding: 20px;
+    padding: 29px;
     border-radius: 12px;
     border-left: 5px solid #ffffff; 
     transition: transform 0.3s ease,background-color 0.3s ease, box-shadow 0.3s ease; 
@@ -61,7 +77,7 @@ h2 {
     color: #121212;
     padding: 5px 10px;
     border-radius: 20px;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     font-weight: bold;
     margin-right: 5px;
     margin-bottom: 8px;
@@ -69,6 +85,7 @@ h2 {
     white-space: nowrap;
     width: fit-content;
     max-width: 100%;
+    word-break: break-word;
 }
 
 /* Banner dos ícones */
