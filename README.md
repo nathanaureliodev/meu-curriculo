@@ -10,7 +10,7 @@ O site foi construído de forma totalmente responsiva, garantindo uma excelente 
 
 O projeto está publicado e pode ser acessado de qualquer lugar através do GitHub Pages:
 
-👉 **[Clique aqui para acessar o meu Portfólio Web](https://github.com/nathanaureliodev/meu-curriculo)**
+👉 **[Clique aqui para acessar o meu Portfólio Web](https://nathanaureliodev.github.io/meu-curriculo/)**
 
 ---
 
@@ -28,7 +28,7 @@ Para a construção deste projeto, apliquei conceitos fundamentais de desenvolvi
 ## 📚 Meu Foco de Estudos Atuais
 
 Este portfólio reflete a base prática que venho construindo enquanto me aprofundo em conceitos mais complexos de computação:
-- **Graduação/Estudos:** Análise de Sistemas e Arquitetura de Computadores.
+- **Graduação/Estudos:** Análise de Sistemas e Desenvolvimento de sistemas.
 - **Linguagens & Ferramentas:** Evoluindo constantemente em lógica de programação e no domínio de **JavaScript** e **html e css**.
 - **Metodologia:** Foco em disciplina, consistência e aplicação prática de projetos reais.
 
